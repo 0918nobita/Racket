@@ -48,7 +48,10 @@
     (+ n ((X X) (- n 1)))))
 
 ; make-wa2 もまた、X を受け取って wa を返す関数
-; (make-wa2 make-wa2) => wa
+; (make-wa2 make-wa2)
+; => (#<procedure:make-wa2> #<procedure:make-wa2>)
+; => (λ (n) (if (>= 0 n) 0 (+ n ((make-wa2 make-wa2) (- n 1)))))
+; 全体が λ 抽象になったので、ここで簡約は終了
 
 ; make-wa2 の定義を展開したうえで wa を定義
 (define wa2
