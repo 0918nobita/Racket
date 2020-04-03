@@ -1,6 +1,8 @@
 #lang racket/base
 
-(require racket/trace)
+(require (only-in racket/trace
+                  trace
+                  untrace))
 
 (define (sum n)
   (if (zero? n)

@@ -1,7 +1,16 @@
 #lang racket/base
 
-(require racket/class)
-(require racket/gui/base)
+(require (only-in racket/class
+                  make-object
+                  new
+                  send))
+
+(require (only-in racket/gui/base
+                  button%
+                  canvas%
+                  color%
+                  frame%
+                  message%))
 
 ; Make a frame by instantiating the frame% class
 (define frame

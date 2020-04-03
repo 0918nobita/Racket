@@ -1,6 +1,13 @@
 #lang racket/base
 
-(require racket/contract)
+(require (only-in racket/contract
+                  ->
+                  and/c
+                  any
+                  contract-out
+                  define/contract
+                  flat-contract?
+                  or/c))
 
 (provide (contract-out (amount number?)))
 

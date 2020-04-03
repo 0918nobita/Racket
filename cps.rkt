@@ -1,6 +1,7 @@
 #lang racket/base
 
-(require racket/function)
+(require (only-in racket/function
+                  identity))
 
 (define (fact/cps n k)
   (if (= n 1)
