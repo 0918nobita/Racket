@@ -1,3 +1,3 @@
-# visual novel game
+# Racket
 
-under development
+code examples
